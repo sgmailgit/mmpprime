@@ -6,6 +6,8 @@ import org.mmp.methods.MMPUtil;
 import org.mmp.patientmodule.pages.ScheduleAppointmentPage;
 import org.testng.annotations.BeforeMethod;
 
+//SendMessages File is added 
+
 public class MMP_004_SendMessages extends BaseClass{
 
 	MMPUtil mmpUtil ;
