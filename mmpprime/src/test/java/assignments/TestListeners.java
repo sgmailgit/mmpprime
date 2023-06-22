@@ -1,6 +1,10 @@
 package assignments;
 
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
@@ -10,14 +14,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-@Listeners(testngListeners.ListenersLog.class)
+//@Listeners(testngListeners.ListenersLog.class)
 
 public class TestListeners  {
 	WebDriver driver;
@@ -42,7 +41,7 @@ public class TestListeners  {
 		String actual = driver.findElement(By.xpath("//h4[normalize-space()='Logged in as Super User (admin) at Inpatient Ward.']")).getText();
 				
 		String expected ="Logged in as Super User (admin) at Inpatient Ward.";
-		Assert.assertEquals(actual.trim(), expected);
+		AssertJUnit.assertEquals(actual.trim(), expected);
 		driver.findElement(By.xpath("//a[normalize-space()='Logout']")).click();
 						
 	}
